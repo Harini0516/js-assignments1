@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harini</title>
+</head>
+<script>
+    //Difference between var,let and const
+    //var-globally scoped or function scoped
+       var fun1="harini";            //fun1-globally scoped.
+       function newFunction(){
+           var hello="hi";         //hello-function scoped.
+       }
+    //var variables can be redeclared and updated.
+       var name1='harini';
+       var name1='harini i';
+
+   //  let & const - block scoped.
+       let name1='hi';
+       let iteration =4;
+       if(iteration>3)
+       {
+           let nam2='hello';
+           console.log(nam2);
+       }
+       console.log(nam2)            //nam2 is undefined.
+
+    //let can be updated but not redeclared.
+       let name='harini';
+       name='harini i';
+
+     //const declarations are block scoped.
+     // cant be updated or redeclared.
+      const name='harini';
+      const name='harini i';
+      //declaration error occurs.
+
+     //const objects cant be updated but their properties can be updated
+     const rectangle={
+         length:4,
+         color:red
+     }     
+     length.square=5;
+     //therefore properties can be updated in const
+     
+
+</script>
+<body>
+    
+</body>
+</html>

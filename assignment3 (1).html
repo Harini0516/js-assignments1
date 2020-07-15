@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harini</title>
+</head>
+<script>
+    //Datatypes in javascript
+    var length = 16;                               // Number
+    var lastName = "Johnson";                      // String
+    var x = {firstName:"John", lastName:"Doe"};    // Object
+
+    //number as strintg
+    var x = "16" + "Volvo";
+
+    //Numbers can be written with, or without decimals:
+    var x1 = 34.00;     // Written with decimals
+    var x2 = 34;        // Written without decimals
+
+    //JavaScript Booleans
+    var x = 5;
+    var y = 5;
+    var z = 6;
+    (x == y)       // Returns true
+    (x == z)       // Returns false
+
+    //JavaScript Arrays
+    var cars = ["Saab", "Volvo", "BMW"];
+
+    //JavaScript Objects
+    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+    //undefined
+    var car;    // Value is undefined, type is undefined
+
+    //Null
+    var person={name1:"ghjd",name2:"cvhy",name3:"aics"}
+    person = Null;
+    typeof(person)   //output : object
+
+    //empty an object by setting it to undefined:
+    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+    person = undefined;   // Now both value and type is undefined
+
+    //undefined and null are equal in value but different in type:
+    typeof undefined           // undefined
+    typeof null                // object
+
+    /*Primitive Data
+      string
+      number
+      boolean
+      undefined*/
+      //example
+      typeof "John"              // Returns "string"
+      typeof 3.14                // Returns "number"
+      typeof true                // Returns "boolean"
+      typeof false               // Returns "boolean"
+      typeof x                   // Returns "undefined" (if x has no value)
+      //Complex Data
+      //1)function
+      //2)object
+      typeof {name:'John', age:34} // Returns "object"
+      typeof [1,2,3,4]             // Returns "object" (not "array", see note below)
+      typeof null                  // Returns "object"
+      typeof function myFunc(){}   // Returns "function
+
+</script>
+<body>
+    
+</body>
+</html>
