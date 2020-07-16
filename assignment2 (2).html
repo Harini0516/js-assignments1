@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harini</title>
+   
+</head>
+<body>
+    <h1>JavaScript array methods</h1>
+    <p id="demo"></p>
+    <h2>Join method</h2>
+    <p id="demo1"></p>
+    <h3>After pushing and poping</h3>
+    <p id="demo2"></p>
+    <h4>Shift method - 1st element will be shifted (i.e)removed</h4>
+    <p id="demo3"></p>
+    <h4>Unshift method-Adds a new element to an array</h4>
+    <p id="demo4"></p>
+    <h4>Splice method</h4>
+    <p id="demo5"></p>
+    <h4>Splice method to remove elements</h4>
+    <p id="demo6"></p>
+    <h4>Slicing method</h4>
+    <p id="demo7"></p>
+    <h4>deleting elements</h4>
+    <p id="demo8"></p>
+
+    <h1>JavaScript String Methods</h1>
+    <p id="demo9"></p>
+    <h2>Finding a String in a String</h2>
+    <p id="demo10"></p>
+    <h2>Lastindexof method</h2>
+    <p id="demo11"></p>
+    <h2>search method</h2>
+    <p id="demo12"></p>
+    <h2>substring method</h2>
+    <p id="demp13"></p>
+    <h2>replace method</h2>
+    <p id="demo14">Please visit microsoft.</p>
+    <h2>touppercase & lowercase method</h2>
+    <p id="demo15"></p>
+    <h2>String.trim()<br>
+        The trim() method removes whitespace from both sides of a string:</h2>
+
+    <script>
+        //JavaScript Array Methods
+        //Converting Arrays to Strings
+        var cars=["Audi","BMW","Cadillac","Chevrolet","Datsun"];
+        document.getElementById("demo").innerHTML=cars.toString();
+
+        //join method
+        document.getElementById("demo1").innerHTML=cars.join("-");
+
+        //poping and pushing
+        cars.pop()    //removes last element from cars.
+        cars.push("Ferrari");
+        document.getElementById("demo2").innerHTML=cars.join("-");
+
+        //Shift method
+        cars.shift();
+        document.getElementById("demo3").innerHTML=cars.join("-");
+
+        //unshift method
+        cars.unshift('ford');
+        document.getElementById("demo4").innerHTML=cars.join("-");
+
+        //Splicing an Array
+        cars.splice(2,0,"Rolls-Royce","toyota");
+        document.getElementById("demo5").innerHTML=cars.join("-");
+
+        //splice to remove elements
+        cars.splice(0,1);
+        document.getElementById("demo6").innerHTML=cars.join("-");
+
+        //Merging (Concatenating) Arrays
+        //The concat() method creates a new array by merging (concatenating) existing arrays
+        var myGirls = ["Cecilie", "Lone"];
+        var myBoys = ["Emil", "Tobias", "Linus"];
+        var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
+
+        //slice() method slices out a piece of an array into a new array.
+        var newcar=cars.slice(1);
+        document.getElementById("demo7").innerHTML=newcar.join("-");
+
+        //Deleting Elements
+        delete cars[0];
+        document.getElementById("demo8").innerHTML=cars.join("-");
+
+        //JavaScript String Methods
+        //String Length
+        //The length property returns the length of a string:
+        var name="hskahildv";
+        document.getElementById("demo9").innerHTML=name.length;
+        
+        //Finding a String in a String
+        var chars ="hey hi all welcome to our park";
+        var pos = chars.indexOf("all");
+        document.getElementById("demo10").innerHTML = pos;
+
+        //The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+        var charss ="hey hi all welcome to our park all all";
+        var pos = charss.indexOf("all");
+        document.getElementById("demo11").innerHTML = pos;
+
+        //search method
+        //The search() method searches a string for a specified value and returns the position of the match
+        var chars ="hey hi all welcome to our park";
+        var pos = chars.search("all");
+        document.getElementById("demo12").innerHTML = pos;
+
+        //substring method
+        var str = "Apple, Banana, Kiwi";
+        var res = str.substring(7,13);
+        document.getElementById("demo13").innerHTML = res;
+
+        //Replacing String Content
+        //The replace() method replaces a specified value with another value in a string:
+        str = "Please visit Microsoft!";
+        var n = str.replace("Microsoft", "Lets upgrade");
+        document.getElementById("demo14").innerHTML = n;
+
+        //Converting to Upper and Lower Case
+        //A string is converted to upper case with toUpperCase():
+        var text1 = "Hello World!";       // String
+        var text2 = text1.toUpperCase();  // text2 is text1 converted to upper
+        document.getElementById("demo15").innerHTML = text2;
+    </script>
+    
+</body>
+</html>
