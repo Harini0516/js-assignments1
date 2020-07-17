@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harini</title>
+    <script>
+        function checkgrade(){
+            var nom=Number(document.getElementById("uname").value);
+            console.log(nom);
+            if( nom>90 && nom<=100)
+               return document.getElementById("demo").textContent = 'A'
+            else if(nom>80 && nom<=90)   
+               return document.getElementById("demo").textContent = 'B'
+            else if(nom>70 && nom<=80)
+               return document.getElementById("demo").textContent = 'C' 
+            else if(nom>50 && nom<=70)
+               return document.getElementById("demo").textContent = 'D'   
+            else  
+                return document.getElementById("demo").textContent = 'Fail'    
+        }
+       
+       
+    </script>
+ 
+</head>
+<body>
+    <label for="uname">Your mark:</label>
+    <input type="text" id="uname" name="number"><br>
+    <button onclick=checkgrade()>Enter</button>
+    <h2>Your Grade</h2>
+    <p id="demo"></p>
+   
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harini</title>
+    
+</head>
+<body>
+    <h1>Given number is odd or even?</h1>
+    <form action="">
+        <label for="gvalue">Enter a number:</label>
+        <input type="text" id="gvalue" name="number" placeholder="your number here"><br>
+     </form>
+    
+    <script>
+       
+        function checkoddoreven(){
+            var input = Number(document.getElementById("gvalue").value);
+            if(input%2==0)
+                alert("Even number");
+             else
+               alert("odd number"); 
+        }
+      </script>
+      <button onclick="checkoddoreven()">Enter</button>
+     
+</body>
+</html>
