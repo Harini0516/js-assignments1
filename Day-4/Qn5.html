@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qn 5</title>
+    <script>
+        let sales= Number(prompt("Enter the sales"));
+        let commison , commisonperc = null;
+        if(sales>0 && sales<=5000)
+          {
+              commisonperc = 2;
+              commison= sales*(commisonperc/100);
+          }
+          else if(sales>5001 && sales<=10000)
+          {
+              commisonperc = 5;
+              commison= sales*(commisonperc/100);
+          }
+          else if(sales>10001 && sales<=20000)
+          {
+              commisonperc = 7;
+              commison= sales*(commisonperc/100);
+          }
+        else if(sales>20000)
+          {
+              commisonperc = 10;
+              commison= sales*(commisonperc/100);
+          }
+          else{
+              console.log("invalid input")
+              alert("invalid")
+          }
+          commison=commison.toFixed(3);
+          console.log(`your commission is ${commison}`);
+          alert(`your commission is ${commison}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qn 7</title>
+    <script>
+        let userinput = Number(prompt("enter a number"))
+        primeFactorsTo(userinput);
+function primeFactorsTo(max)
+{
+    var store  = [], i, j, primes = [];
+    for (i = 2; i <= max; ++i) 
+    {
+        if (!store [i]) 
+          {
+            primes.push(i);
+            for (j = i << 1; j <= max; j += i) 
+            {
+                store[j] = true;
+            }
+        }
+    }
+    return primes;
+}
+
+//console.log(primeFactorsTo(5));
+
+
+console.log(primeFactorsTo(userinput));
+    </script>
+</head>
+<body>
+ 
+    
+</body>
+</html>
