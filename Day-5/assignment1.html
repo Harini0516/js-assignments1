@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question 1</title>
+    <script>
+        let num1=null;
+        num1 = Number(prompt("enter a positive num:"));
+        let check=null;
+        let userPompt=true;
+        let nextnum = null;
+        while(userPompt)
+        {
+            check=num1==null?true:false;
+             nextnum = (num1>0 || check)? userPompt=false:num1= Number(prompt("enter a positive number:"));
+
+        }
+        console.log(num1);
+        const nums=[];
+        for(let i=1;i<=num1;i++)
+        {
+            nums.push(i);
+        }
+        console.log(nums);
+        const numsNew=[];
+        for(let i=0;i<num1;i++)
+        {
+            if((nums[i]%2)==0)
+                 numsNew.push(i*i*i);
+
+        }
+        console.log(numsNew);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

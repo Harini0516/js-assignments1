@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-2</title>
+    <script>
+        class user{
+            constructor(name,age,email){
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                this.urcoins=0;
+                this.courses=[];
+            }
+            static greetings(){
+                console.log("Hey!there");
+
+            }
+            login(){
+                console.log(`${this.name} has logged in`);
+               return this;
+            }
+            logout(){
+                console.log(`${this.name} has logged out`);
+               return this;
+            }
+            getDetails(){
+                console.log(`Name is ${this.name},email is ${this.email},urcoins are${this.urcoins},courses=${this.courses}`);
+
+            }
+
+        }
+        class Moderator extends user{
+            constructor(name,age,email,role){
+                super(name,age,email);
+                this.role=role; 
+            }
+            deleteUser(user){
+                users=users.filter(u=>{
+                    return u.email!=user.email;
+                })
+
+            }
+            addCoins(user){
+                user.urcoins++;
+                console.log(`${user.name} has ${user.urcoins} coins`);
+                return this;
+            }
+        
+        removeCoins(user){
+            if(user.urcoins>0){
+                user.urcoins--;
+                console.log(`${user.name} ur coin has decremented remaining: ${user.urcoins}coins left`);
+            }
+            else{
+                console.log(`${user.name} has 0 urcoins`);
+
+            }
+            return this;
+            
+            }
+        }
+        class Admin extends Moderator{
+           addCourse(user,course){
+               user.courses.push(course);
+               console.log(user);
+           }
+           removeCourse(user,course){
+            let index=user.courses.indexOf(course);
+            user.courses.splice(index,1);
+            console.log(`${user.name}, ${course} course is removed.`);
+            console.log(user);
+        }
+        }
+  
+        let userFirst = new User('First',20,'xyz@gmail.com')
+        let userSecond = new User('Second',22,'abc@gmai.com')
+        let modtyu = new Moderator('tyu',19,'tyu@gmail.com','Moderator');
+        let adminpok = new Admin('pok',18,'r@gmail.com');
+        let users = [userFirst,userSecond,modtyu,adminpok];
+        
+        userXyz.login();
+        User.greet();
+
+        modtyu.addCoins(userFirst);
+        modtyu.addCoins(userSecond);
+        adminpok.addCourse(userFirst,"Python")
+        adminpok.addCourse(userFirst,"JavaScript")
+        adminpok.addCourse(userFirst,"R-Programming")
+        modtyu.removeCoins(userFirst);
+        adminpok.removeCourse(userFirst,"JavaScript");
+
+        userFirst.getDetails();
+        userFirst.logout();
+
+        userSecond.login();
+        User.greet();
+
+        modtyu.addCoins(userSecond);
+        modtyu.addCoins(userSecond);
+        modtyu.addCoins(userSecond);
+        adminpok.addCourse(userSecond,"C")
+        adminpok.addCourse(userSecond,"C++")
+        adminpok.addCourse(userSecond,"R-Programming")
+        adminpok.addCourse(userSecond,"Python")
+        modtyu.removeCoins(userSecond);
+        adminpok.removeCourse(userSecond,"Python");
+
+        userSecond.getDetails();
+        userSecond.logout();
+        modtyu.deleteUser(userAbc);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
