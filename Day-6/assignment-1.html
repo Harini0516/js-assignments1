@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+   
+
+   
+    
+</head>
+<body id="bg">
+    <h1 style="text-align:center;padding:50px; ">Changing Background</h1>
+    <script>
+        let colorsArray =['Red','Blue','Green','Skyblue','Yellow','grey','Tomato'];
+        let bg = document.getElementById('bg');
+
+        function change(){
+            const colorsArrayLength = colorsArray.length;
+            let random = Math.trunc(Math.random()*colorsArrayLength);
+            console.log(colorsArray[random]);
+            bg.style.backgroundColor=colorsArray[random];
+        }
+        setInterval(change,5000);
+
+    </script>
+    
+</body>
+</html>
